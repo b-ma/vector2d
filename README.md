@@ -18,6 +18,7 @@ Install
 -------------------------------------------------
 
 npm : `npm install git+https://github.com/b-ma/vector2d.git`
+
 bower : `bower install git+https://github.com/b-ma/vector2d.git` (need test)
 
 
