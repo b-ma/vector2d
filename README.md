@@ -13,6 +13,7 @@ built and minified version are located here:
 -   register as npm module
 -   register as bower module
 -   test with requirejs
+-   add `bower.json`
 
 Install
 -------------------------------------------------

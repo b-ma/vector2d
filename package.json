@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Benjamin Matuszewski",
+  "repository": "https://github.com/b-ma/vector2d",
   "license": "ISC",
   "devDependencies": {
     "gulp": "~3.8.6",
