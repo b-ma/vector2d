@@ -1,20 +1,13 @@
 {
-  "name": "vector",
+  "name": "b-ma.vector2d",
   "version": "0.0.0",
   "description": "vector 2d library",
-  "main": "index.js",
+  "main": "vector.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Benjamin Matuszewski",
   "repository": "https://github.com/b-ma/vector2d",
   "license": "ISC",
-  "devDependencies": {
-    "gulp": "~3.8.6",
-    "browserify": "~5.9.1",
-    "vinyl-source-stream": "~0.1.1",
-    "gulp-uglify": "~0.3.1",
-    "gulp-rename": "~1.2.0",
-    "gulp-streamify": "0.0.5"
-  }
+  "devDependencies": {}
 }
