@@ -13,13 +13,22 @@ Vector.substract = function(v1, v2) {
     return new this(v1.x - v2.x, v1.y - v2.y);
 }
 
-Vector.multiply = function(v1, v2) {
-    return new this(v1.x * v2.x, v1.y * v2.y);
+Vector.multiply = function(v1, val) {
+    return new this(v1.x * val, v1.y * val);
+}
+
+Vector.divide = function(v1, val) {
+    return new this(v1.x / val, v1.y / val);
 }
 
 Vector.distance = function(v1, v2) {
-    var v = this.substract(v2, v1);
-    return v.magnitude();
+  var v = this.substract(v2, v1);
+  return v.magnitude();
+}
+
+Vector.distanceSqrt = function(v1, v2) {
+  var v = this.substract(v2, v1);
+  return v.magnitudeSqrt();
 }
 
 Vector.clone = function(v) {
@@ -27,7 +36,25 @@ Vector.clone = function(v) {
 }
 
 Vector.orthogonal = function(v) {
-  return new this(v.y, -v.x);
+  return new this(-v.y, v.x);
+}
+
+// returns a normalized vector orthogonal to the line
+// defined by the vector passed as arguments
+Vector.normal = function(v1, v2) {
+  var temp = Vector.substract(v2, v1).normalize();
+
+  return new this(-temp.y, temp.x);
+}
+
+Vector.normalize = function(v) {
+  return v.clone().normalize();
+}
+
+Vector.dot = function(v1, v2) {
+  v1.normalize();
+  v2.normalize();
+  return (v1.x * v2.x) + (v1.y * v2.y);
 }
 
 // instance methods
@@ -44,8 +71,13 @@ Vector.prototype.substract = function(v) {
 }
 
 Vector.prototype.multiply = function(value) {
-    this.x *= value;
-    this.y *= value;
+    if (!(value instanceof Vector)) {
+      this.x *= value;
+      this.y *= value;
+    } else {
+      this.x *= value.x
+      this.y *= value.y
+    }
     return this;
 }
 Vector.prototype.divide = function(value) {

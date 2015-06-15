@@ -1,5 +1,5 @@
 {
-  "name": "b-ma.vector2d",
+  "name": "vector",
   "version": "0.0.0",
   "description": "vector 2d library",
   "main": "vector.js",
